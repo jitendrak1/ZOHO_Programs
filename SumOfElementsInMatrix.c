@@ -25,13 +25,16 @@ int main(){
 	int i, j, T, M, N, sum = 0;
 	int arr[100][100];
 	scanf("%d",&T);
-	scanf("%d %d",&M,&N);
-	for(i = 0; i < M; i++){
-		for(j = 0; j < N; j++){
-			scanf("%d",&arr[i][j]);
-			sum = sum + arr[i][j];
+	while(T--){
+		scanf("%d %d",&M,&N);
+		for(i = 0; i < M; i++){
+			for(j = 0; j < N; j++){
+				scanf("%d",&arr[i][j]);
+				sum = sum + arr[i][j];
+			}
 		}
+		printf("%d\n",sum);	
+		sum = 0;
 	}
-	printf("%d\n",sum);
 	return 0;
 }
